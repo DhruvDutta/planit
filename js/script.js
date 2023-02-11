@@ -53,7 +53,7 @@ function read(){
             
             let box=document.createElement('div');
             box.setAttribute('class','box');
-            box.setAttribute('style',`--i:${i++}`);
+            box.setAttribute('style',`--i:${i++};`);
 
             percentage =(ed-st)/10.8
             percentage=Math.min(100,percentage)

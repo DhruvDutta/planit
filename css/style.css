@@ -4,7 +4,7 @@
 }
 .main{
     position: absolute;
-    top: 50%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
@@ -16,14 +16,14 @@
 }
 .bar{
     position: relative;
-    height: 2em;
+    height: 1em;
     width: 100%;
-    background-color: aliceblue;
+    background-color: #eee;
     border-radius: .1em;
 }
 .bar span{
     position: absolute;
-    top: -100%;
+    top: -200%;
     width: 5.55%;
     text-align: center;
     left: calc((var(--i))*5.55%);
@@ -40,19 +40,18 @@
 }
 .box{
     position: absolute;
-    height: 2em;
-    width: 50%;
-    background-color: rgba(0,0,0,0.2);
+    height: 1em;
+    background-color: rgba(0,0,0,0.3);
 }
 :root{
-    --gap:60%
+    --gap:1em
 }
 .box div{
     position: absolute;
     top:calc(var(--i)*var(--gap));
     color: #ddd;
     width: 100%;
-    transform: rotate(0deg) translateY(100%);
+    transform: translateY(.2em);
     border-bottom: 1px solid #999;
     padding-left: .3em;
 }
@@ -61,7 +60,8 @@
     position: absolute;
     top: calc(var(--i)*var(--gap)*-1);
     left: 0%;
-    height:calc(calc(var(--i)*var(--gap)) + 1.5em );
+    height:calc( (var(--i)*var(--gap))  );
+    transform: translateY(1.5em);
     width: 1px;
     background-color: #999;
 }
