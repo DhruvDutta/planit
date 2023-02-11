@@ -41,6 +41,7 @@ function write(name,start,end){
 read()
 function read(){
     firebase.database().ref('users/').on('value',(data)=>{
+        let i=1;
         data.forEach((element) => {
             let name = element.key
             let start=element.val().start_time
@@ -52,10 +53,14 @@ function read(){
             
             let box=document.createElement('div');
             box.setAttribute('class','box');
+            box.setAttribute('style',`--i:${i++}`);
+
             percentage =(ed-st)/10.8
-            offset=(st-300)/10.8
+            percentage=Math.min(100,percentage)
+            offset=((st-300)/10.8)+2.8
+            offset=Math.max(0,offset)
             box.style.width=`${percentage}%`
-            box.style.left = `${offset+2.8}%`
+            box.style.left = `${offset}%`
             console.log(name,st,ed,percentage)
             box.innerHTML = `<div>${name}</div>`
             document.getElementById('bar').appendChild(box);

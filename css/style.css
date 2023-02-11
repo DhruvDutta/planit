@@ -44,9 +44,24 @@
     width: 50%;
     background-color: rgba(0,0,0,0.2);
 }
+:root{
+    --gap:60%
+}
 .box div{
     position: absolute;
-    top: 200%;
+    top:calc(var(--i)*var(--gap));
     color: #ddd;
-    transform: rotate(90deg);
+    width: 100%;
+    transform: rotate(0deg) translateY(100%);
+    border-bottom: 1px solid #999;
+    padding-left: .3em;
+}
+.box div::after{
+    content: '';
+    position: absolute;
+    top: calc(var(--i)*var(--gap)*-1);
+    left: 0%;
+    height:calc(calc(var(--i)*var(--gap)) + 1.5em );
+    width: 1px;
+    background-color: #999;
 }
