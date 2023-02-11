@@ -1,0 +1,52 @@
+.head{
+    box-shadow: .2em 0em .5em #222;
+    background-color: rgba(255,255,255,0.05);
+}
+.main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.main input{
+    margin: .5em;
+    border: none;
+    padding: .2em 1em;
+    border-radius: .2em;
+}
+.bar{
+    position: relative;
+    height: 2em;
+    width: 100%;
+    background-color: aliceblue;
+    border-radius: .1em;
+}
+.bar span{
+    position: absolute;
+    top: -100%;
+    width: 5.55%;
+    text-align: center;
+    left: calc((var(--i))*5.55%);
+}
+.bar span::after{
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 3px;
+    background-color: #eee;
+    border-radius: .2em;
+    left:50%;
+    top: 100%;
+}
+.box{
+    position: absolute;
+    height: 2em;
+    width: 50%;
+    background-color: rgba(0,0,0,0.2);
+}
+.box div{
+    position: absolute;
+    top: 200%;
+    color: #ddd;
+    transform: rotate(90deg);
+}
